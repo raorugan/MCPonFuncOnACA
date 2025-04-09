@@ -20,7 +20,7 @@ This is a quickstart template to easily build and deploy a custom remote MCP ser
 
 >Note
 
-Large Language Models (LLMs) are non-deterministic and it's important to be aware of their possible inaccuracies, real-time changes. Therefore recommend to double-check information and validate before making decisions.
+>Large Language Models (LLMs) are non-deterministic and it's important to be aware of their possible inaccuracies, real-time changes. Therefore recommend to double-check information and validate before making decisions.
 
 
 ## Prerequisites
