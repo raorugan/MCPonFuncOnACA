@@ -99,7 +99,7 @@ def get_attractions(context) -> str:
     headers = {
         "x-rapidapi-host": "booking-com15.p.rapidapi.com",
 # Replace the API key with a secure method of retrieval (e.g., environment variable)
-        "x-rapidapi-key": "8e67031934mshca12b6f3403e477p1117cajsn8506d5ca6a48"
+        "x-rapidapi-key": "<your_api_key_here>"
     }
 
     logging.info(f"Sending request to {url} with params: {query_params}")
@@ -160,7 +160,7 @@ def get_attraction_reviews(context) -> str:
     headers = {
         "x-rapidapi-host": "booking-com15.p.rapidapi.com",
         # Replace the API key with a secure method of retrieval (e.g., environment variable)
-        "x-rapidapi-key": "8e67031934mshca12b6f3403e477p1117cajsn8506d5ca6a48"
+        "x-rapidapi-key": "<your_api_key_here>"
     }
 
     logging.info(f"Sending request to {url} with params: {query_params}")
