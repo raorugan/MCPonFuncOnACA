@@ -1,0 +1,9 @@
+{
+  "webSitesFunctions": "func-",
+  "resourcesResourceGroups": "rg-",
+  "managedIdentityUserAssignedIdentities": "mi-",
+  "appContainerApps": "app-",
+  "containerRegistryRegistries": "acr-",
+  "storageStorageAccounts": "stg-",
+  "operationalInsightsWorkspaces": "log-"
+}

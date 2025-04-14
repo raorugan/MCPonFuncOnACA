@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+
+name: mcpfunconacademo
+metadata:
+    template: azd-init@1.10.3
+services:
+    code:
+        project: src
+        host: containerapp
+        language: python
+        docker: 
+            path: Dockerfile
+            registry: $(AZURE_CONTAINER_REGISTRY_ENDPOINT)
+            image: funcmcpimg
+            tag: latest
+            build_args:
+                - name: AZURE_CONTAINER_REGISTRY_ENDPOINT
+                  value: $(AZURE_CONTAINER_REGISTRY_ENDPOINT)
+                - name: AZURE_CONTAINER_REGISTRY_USERNAME
+                  value: "${AZURE_CONTAINER_REGISTRY_USERNAME}"
+                - name: AZURE_CONTAINER_REGISTRY_PASSWORD
+                  value: "${AZURE_CONTAINER_REGISTRY_PASSWORD}"
+            
