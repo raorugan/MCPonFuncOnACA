@@ -31,6 +31,9 @@ This is a quickstart template to easily build and deploy a custom remote MCP ser
   + [Visual Studio Code](https://code.visualstudio.com/)
   + [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
 
+> Note : Here I have used [Rapid API marketplace](https://rapidapi.com/hub) Booking COM travel APIs to make calls and process the travel details. The API needs a key so you will need to subscribe for Booking COM API to get the key and use it.
+
+
 ## Prepare your local environment
 
 An Azure Storage Emulator is needed for this particular sample because we will save and get snippets from blob storage.
