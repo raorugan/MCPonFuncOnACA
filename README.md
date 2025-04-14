@@ -117,13 +117,27 @@ An Azure Storage Emulator is needed for this particular sample because we will s
 
 Use instructions documented in this [link](https://learn.microsoft.com/en-us/azure/container-apps/functions-usage?pivots=azure-portal) to provision the Azure Functions on Azure Container Apps resource hosting the MCP Azure Functions server using the all new MCP extension for Azure Functions
 
+OR
+
+Run this azd command to provision the function app, with any required Azure resources, and deploy your code:
+```sh
+azd up
+
+```
+
+
 Additionally, [API Management]() can be used for improved security and policies over your MCP Server, and [App Service built-in authentication](https://learn.microsoft.com/azure/app-service/overview-authentication-authorization) can be used to set up your favorite OAuth provider including Entra.  
 
 ### Connect to your function app from a client
 
 Your client will need a key in order to invoke the new hosted SSE endpoint, which will be of the form `https://<function-name>.*****-****.<location>.azurecontainerapps.io`. The hosted function requires a system key by default which can be obtained from the Storage account-> Blob containers -> azure-webjobs-secrets->host.json -> View/edit Obtain the system key value named `mcp_extension`.
 
-For MCP Inspector, you can include the key in the URL: `https://<function-name>.*****-****.<location>.azurecontainerapps.io/runtime/webhooks/mcp/sse?code=<your-mcp-extension-system-key>`.
+For MCP Inspector, you can include the key in the URL: 
+
+```sh
+`https://<function-name>.*****-****.<location>.azurecontainerapps.io/runtime/webhooks/mcp/sse?code=<your-mcp-extension-system-key>`.
+
+```
 
 For GitHub Copilot within VS Code, you should instead set the key as the `x-functions-key` header in `mcp.json`, and you would just use `https://<function-name>.*****-****.<location>.azurecontainerapps.io/runtime/webhooks/mcp/sse` for the URL. The following example uses an input and will prompt you to provide the key when you start the server from VS Code:
 
